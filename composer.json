@@ -1,5 +1,5 @@
 {
-    "name": "AtServer/Client",
+    "name": "at_server/client",
     "description": "TCP Client",
     "license": "MIT",
     "type": "library",
