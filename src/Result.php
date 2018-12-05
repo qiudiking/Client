@@ -12,6 +12,7 @@ namespace AtServer;
 class Result {
 	protected $data;
 	protected static $instance = null;
+	protected $fds;
 
 	public function __construct() {
 		$this->init();
@@ -29,6 +30,22 @@ class Result {
 	public function init() {
 		$this->data = array( 'code' => 0, 'msg' => '', 'data' => '','_time'=>time() ,'_request_id'=>getRequestId());
 		return $this;
+	}
+
+	/**
+	 * @param $fd
+	 */
+	public function setFds( $fd )
+	{
+		$this->fds = $fd;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getFd()
+	{
+		return $this->fds;
 	}
 
 	/**
